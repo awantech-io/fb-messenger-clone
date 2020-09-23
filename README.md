@@ -9,5 +9,8 @@
     * [x] Install Material-UI.
     * [x] Style the button.
     * [x] Style the form.
-    * [x] Style the messages list. 
+    * [x] Style the messages list.
+* [x] Create Message component.
+    * [x] Sent message props to Message component.
+* [x] Set username for send message.
 
