@@ -8,8 +8,8 @@ function App() {
   // declare form input state (using react hooks)
   const [input, setInput] = useState('');
   const [messages, setMessage] = useState([
-    // {username:'chacha', text:'hey guy'},
-    // {username:'yaya', text:'whats up'}
+    {username:'chacha', text:'hey guy'},
+    {username:'yaya', text:'whats up'}
   ]);
   const [username, setUsername] = useState('');
 
