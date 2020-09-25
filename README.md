@@ -14,4 +14,5 @@
     * [x] Sent message props to Message component.
 * [x] Set username for send message.
 * [x] Add styling to message.
+* [x] Add user checking for user style. 
 

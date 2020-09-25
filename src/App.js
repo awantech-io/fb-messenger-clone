@@ -7,9 +7,9 @@ function App() {
 
   // declare form input state (using react hooks)
   const [input, setInput] = useState('');
-  const [messages, setMessage] = useState([
-    {username:'chacha', text:'hey guy'},
-    {username:'yaya', text:'whats up'}
+  const [messages, setMessages] = useState([
+    {username:'Mat', text:'hey guy'},
+    {username:'Jon', text:'whats up'}
   ]);
   const [username, setUsername] = useState('');
 
@@ -24,15 +24,15 @@ function App() {
   const sendMessage = (event) => {
     // add the input in message array 
     //setMessage([...messages, input]);
-    setMessage([...messages, { username: username, text: input}]);
+    setMessages([...messages, { username: username, text: input}]);
     setInput('');
     event.preventDefault();
   }
-
+  
   return (
     <div className="App">
       <h1>Messenger</h1>
-      <h2>Hello {username}</h2>
+      <h2>Welcome {username}</h2>
 
       <form>
       <FormControl>
@@ -44,7 +44,8 @@ function App() {
 
       {
         messages.map(message => (
-          <Message username={message.username} text={message.text} />
+           <Message username={username} message={message} />
+          //<Message username={message.username} text={message.text} />
         ))
       }
     </div>
