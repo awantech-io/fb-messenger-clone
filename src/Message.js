@@ -4,7 +4,7 @@ import './Message.css';
 
 function Message({message, username}) {
     const isUser = username === message.username;
-    //console.log(message.username);
+    //console.log(message.message);
     //console.log(message.text);
     return (
         <div className={`message ${isUser && 'message__user'}`}>
@@ -15,7 +15,7 @@ function Message({message, username}) {
                         variant="h5"
                         component="h2"
                     >
-                        {message.username}:{message.text}
+                        {message.username}:{message.message}
                     </Typography>
                 </CardContent>
             </Card>

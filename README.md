@@ -20,3 +20,4 @@
     * [x] Create 2 dummy document for testing.
     * [x] Install firebase cli. - npm install firebase
     * [x] Create firebase config files.
+    * [x] Fetch message from firebase database.
