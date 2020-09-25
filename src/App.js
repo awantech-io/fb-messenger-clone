@@ -3,6 +3,7 @@ import { Button, FormControl, InputLabel, Input } from '@material-ui/core';
 import './App.css';
 import Message from './Message';
 import db from './firebase';
+import firebase from 'firebase';
 
 function App() {
 
@@ -32,11 +33,19 @@ function App() {
 
   // function send message input
   const sendMessage = (event) => {
+    event.preventDefault();
+
+    db.collection('messages').add({
+      message: input,
+      username: username,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    })
+
     // add the input in message array 
     //setMessage([...messages, input]);
-    setMessages([...messages, { username: username, text: input}]);
+    // setMessages([...messages, { username: username, text: input}]);
+    
     setInput('');
-    event.preventDefault();
   }
   
   //console.log(messages);

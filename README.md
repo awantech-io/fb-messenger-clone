@@ -15,9 +15,11 @@
 * [x] Set username for send message.
 * [x] Add styling to message.
 * [x] Add user checking for user style.
-* [] Setup DB at Firebase Firestore
+* [x] Setup DB at Firebase Firestore
     * [x] Create database fb-messenger-clone
     * [x] Create 2 dummy document for testing.
     * [x] Install firebase cli. - npm install firebase
     * [x] Create firebase config files.
-    * [x] Fetch message from firebase database.
+* [x] Fetch message from firebase database.
+* [x] Add new message to firebase database.
+* [x] Add order by date at fetch message from firebase database. 
