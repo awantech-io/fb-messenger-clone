@@ -4,9 +4,9 @@ import './App.css';
 import Message from './Message';
 import db from './firebase';
 import firebase from 'firebase';
+import FlipMove from 'react-flip-move';
 
 function App() {
-
   // declare form input state (using react hooks)
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState([
@@ -15,12 +15,15 @@ function App() {
   ]);
   const [username, setUsername] = useState('');
 
+  // fetch data from db
   useEffect(() => {
     // run once when the app component loads
     // get data from firebase db
-    db.collection('messages').onSnapshot(snapshot => {
+    db.collection('messages')
+    .orderBy('timestamp','desc')
+    .onSnapshot(snapshot => {
       // loop the data and set to doc and return it as object
-      setMessages(snapshot.docs.map(doc => doc.data()))
+      setMessages(snapshot.docs.map(doc => ({id: doc.id, message: doc.data()}) ))
     })
   }, [] )
 
@@ -31,7 +34,7 @@ function App() {
     setUsername(prompt('Please enter your name'));  
   }, [] ) // codition
 
-  // function send message input
+  // Send data to db
   const sendMessage = (event) => {
     event.preventDefault();
 
@@ -44,7 +47,7 @@ function App() {
     // add the input in message array 
     //setMessage([...messages, input]);
     // setMessages([...messages, { username: username, text: input}]);
-    
+
     setInput('');
   }
   
@@ -63,12 +66,14 @@ function App() {
       </FormControl>    
       </form>
 
+      <FlipMove>
       {
-        messages.map(message => (
-           <Message username={username} message={message} />
+        messages.map(({id, message}) => (
+           <Message key={id} username={username} message={message} />
           //<Message username={message.username} text={message.text} />
         ))
       }
+      </FlipMove> 
     </div>
   );
 }

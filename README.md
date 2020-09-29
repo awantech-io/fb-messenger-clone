@@ -23,3 +23,7 @@
 * [x] Fetch message from firebase database.
 * [x] Add new message to firebase database.
 * [x] Add order by date at fetch message from firebase database. 
+* [x] Message flip effect
+    [x] Install React Flip
+    [x] Apply React Flip to message component.
+    [x] Wrap Message list with Flip Move.
