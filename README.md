@@ -34,5 +34,5 @@
     * [x] Remove name display.
     * [x] Put the message form Input at the bottom.
     * [x] Put the send message arrow icon to upper right.
-    
+* [x] Set not login username to unknown user.    
 
