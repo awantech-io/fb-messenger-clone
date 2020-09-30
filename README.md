@@ -35,9 +35,10 @@
     * [x] Put the message form Input at the bottom.
     * [x] Put the send message arrow icon to upper right.
 * [x] Set not login username to unknown user.    
-* [ ] Deploy to Firebase server for live online!
-    * [] Install firebase tools cli.
-    * [] Configure firebase hosting.
-    * [] Build the apps for production.
-    * [] Deploy to Firebase server.
+* [x] Deploy to Firebase server for live online!
+    * [x] Install firebase tools cli.
+    * [x] Configure firebase hosting.
+    * [x] Build the apps for production.
+    * [x] Deploy to Firebase server. 
+* [x] Functional testing.    
 
