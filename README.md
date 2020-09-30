@@ -24,6 +24,15 @@
 * [x] Add new message to firebase database.
 * [x] Add order by date at fetch message from firebase database. 
 * [x] Message flip effect
-    [x] Install React Flip
-    [x] Apply React Flip to message component.
-    [x] Wrap Message list with Flip Move.
+    * [x] Install React Flip
+    * [x] Apply React Flip to message component.
+    * [x] Wrap Message list with Flip Move.
+* [x] Messenger Styling.
+    * [x] Messenger logo.
+    * [x] Put new message form at bottom.
+    * [x] Send Message icon. 
+    * [x] Remove name display.
+    * [x] Put the message form Input at the bottom.
+    * [x] Put the send message arrow icon to upper right.
+    
+
